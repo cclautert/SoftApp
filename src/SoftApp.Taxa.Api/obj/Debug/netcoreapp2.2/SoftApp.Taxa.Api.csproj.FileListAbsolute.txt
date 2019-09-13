@@ -1,0 +1,17 @@
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.csproj.CoreCompileInputs.cache
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.AssemblyInfoInputs.cache
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.AssemblyInfo.cs
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Taxa.Api.deps.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Taxa.Api.runtimeconfig.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Taxa.Api.runtimeconfig.dev.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Taxa.Api.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Taxa.Api.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.csprojAssemblyReference.cache
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.RazorAssemblyInfo.cache
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.RazorAssemblyInfo.cs
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.csproj.CopyComplete
