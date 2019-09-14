@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using SoftApp.Domain.Entities;
 using SoftApp.Domain.Interfaces;
 using SoftApp.Domain.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace SoftApp.Taxa.Api
 {
@@ -34,6 +35,22 @@ namespace SoftApp.Taxa.Api
             var configApp = new ConfigApp();
             Configuration.Bind("ConfigApp", configApp);
             services.AddSingleton(configApp);
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("SoftApp", new Info
+                {
+                    Title = "Obtem Taxa",
+                    Description = "Seleção de pessoa Desenvolvedora .Net Core",
+                    Version = "v1",
+                    Contact = new Contact
+                    {
+                        Name = "Cristiano Claudson Lautert",
+                        Email = "cristiano.c.lautert@gmail.com",
+                        Url = "https://github.com/cclautert"
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +65,19 @@ namespace SoftApp.Taxa.Api
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
+            app.UseSwaggerUI(su =>
+            {
+                su.SwaggerEndpoint("/doc/SoftApp/doc.json", "SoftApp V1");
+                su.RoutePrefix = "doc";
+            });
+
+            app.UseCors(builder =>
+                builder.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowCredentials());
 
             app.UseHttpsRedirection();
             app.UseMvc();

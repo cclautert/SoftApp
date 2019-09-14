@@ -15,3 +15,10 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreap
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.pdb
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\obj\Debug\netcoreapp2.2\SoftApp.Taxa.Api.csproj.CopyComplete
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.deps.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.runtimeconfig.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.runtimeconfig.dev.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Domain.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Domain.pdb

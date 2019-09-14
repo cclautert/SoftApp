@@ -15,3 +15,10 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\obj\Debug\netcor
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\Debug\netcoreapp2.2\SoftApp.Domain.pdb
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\obj\Debug\netcoreapp2.2\SoftApp.Calcula.Api.csproj.CopyComplete
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.deps.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.runtimeconfig.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.runtimeconfig.dev.json
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Domain.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Domain.pdb

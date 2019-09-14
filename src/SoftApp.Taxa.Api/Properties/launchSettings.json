@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "taxaJuros",
+      "launchUrl": "doc",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "SoftApp.Taxa.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "taxaJuros",
+      "launchUrl": "doc",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

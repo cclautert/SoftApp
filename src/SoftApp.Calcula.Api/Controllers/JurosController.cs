@@ -24,7 +24,10 @@ namespace SoftApp.Calcula.Api.Controllers
         {
             try
             {
-                var result = await _jurosService.CalculaJuros(valorinicial, meses);
+                var ValorCalculado = await _jurosService.CalculaJuros(valorinicial, meses);
+
+                var result = string.Format("{0:0.00}", ValorCalculado);
+
                 return Ok(new
                 {
                     resultado = result

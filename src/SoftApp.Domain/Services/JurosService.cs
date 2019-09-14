@@ -73,9 +73,12 @@ namespace SoftApp.Domain.Entities
         {
             return Task.Run(() =>
             {
-                decimal powCasas = (decimal)Math.Pow(10, pCasas);
-                decimal dTrunc = Math.Truncate(powCasas * pValor);
-                return dTrunc / powCasas;
+                decimal integralValue = Math.Truncate(pValor);
+                decimal fraction = pValor - integralValue;
+                decimal factor = (decimal)Math.Pow(10, pCasas);
+                decimal truncatedFraction = Math.Truncate(fraction * factor) / factor;
+                
+                return integralValue + truncatedFraction;
             });
         }
     }
