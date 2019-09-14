@@ -1,18 +1,30 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "6eebc54ff0585b3aedcd1e61bea48e782dbb59ff"
+    "signature": "58991d43325ab4802c03efe2f7af6eaeeeadb49e"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "SoftApp.Domain/1.0.0": {
         "dependencies": {
+          "Aggregates.NET": "0.15.19.875",
           "Microsoft.Build.Tasks.Core": "16.0.461",
           "Newtonsoft.Json": "11.0.0.0"
         },
         "runtime": {
           "SoftApp.Domain.dll": {}
+        }
+      },
+      "Aggregates.NET/0.15.19.875": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aggregates.NET.dll": {
+            "assemblyVersion": "0.15.1.0",
+            "fileVersion": "0.15.1.0"
+          }
         }
       },
       "Microsoft.Build.Framework/16.0.461": {
@@ -62,6 +74,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Win32.Registry/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -766,6 +779,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Aggregates.NET/0.15.19.875": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gQolOfFwxfsrh1HtaCW1QvH+mBWQd7l/nsQ0lAwUT5HjR4TJCKFJNueVXDxGy6ysiQ+Bg867ulTHiGg6yV76DQ==",
+      "path": "aggregates.net/0.15.19.875",
+      "hashPath": "aggregates.net.0.15.19.875.nupkg.sha512"
+    },
     "Microsoft.Build.Framework/16.0.461": {
       "type": "package",
       "serviceable": true,
@@ -786,6 +806,13 @@
       "sha512": "sha512-1CBsIGirCn4iu/2P2bh1sbbuREJ+RziwQyexQx4n2qIVgrxGb6CNLJun4jW8SG4PRoIeoQvY+VdhhHzxRscQQA==",
       "path": "microsoft.build.utilities.core/16.0.461",
       "hashPath": "microsoft.build.utilities.core.16.0.461.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.Win32.Registry/4.3.0": {
       "type": "package",

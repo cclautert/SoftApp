@@ -32,11 +32,11 @@ namespace SoftApp.Calcula.Api.Controllers
             }
             catch (BusinessException be)
             {
-                return BadRequest(new { TaxaErro = be.Message });
+                return BadRequest(new { ErroCalcularJuros = be.Message });
             }
             catch (Exception e)
             {
-                return BadRequest(new { TaxaErro = e.Message });
+                return BadRequest(new { ErroCalcularJuros = e.Message });
             }
         }
     }

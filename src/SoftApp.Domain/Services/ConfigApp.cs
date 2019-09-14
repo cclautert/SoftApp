@@ -15,5 +15,12 @@
             get { return _UrlTaxaApi; }
             set { _UrlTaxaApi = value; }
         }
+
+        private bool _IsRunningTest;
+        public bool IsRunningTest
+        {
+            get { return _IsRunningTest; }
+            set { _IsRunningTest = value; }
+        }
     }
 }

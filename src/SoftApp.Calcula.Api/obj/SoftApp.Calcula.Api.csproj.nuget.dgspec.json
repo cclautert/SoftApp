@@ -126,6 +126,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Aggregates.NET": {
+              "target": "Package",
+              "version": "[0.15.19.875, )"
+            },
             "Microsoft.Build.Tasks.Core": {
               "target": "Package",
               "version": "[16.0.461, )"

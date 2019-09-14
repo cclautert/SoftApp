@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftApp.Domain", "src\SoftApp.Domain\SoftApp.Domain.csproj", "{ED3F95E7-E3B0-4108-A2B4-C24BE89AE94C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftApp.Taxa.Api", "src\SoftApp.Taxa.Api\SoftApp.Taxa.Api.csproj", "{02A60681-612C-4298-84B0-5A49D3C815CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftApp.Taxa.Api", "src\SoftApp.Taxa.Api\SoftApp.Taxa.Api.csproj", "{02A60681-612C-4298-84B0-5A49D3C815CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftApp.Calcula.Api", "src\SoftApp.Calcula.Api\SoftApp.Calcula.Api.csproj", "{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftApp.Calcula.Api", "src\SoftApp.Calcula.Api\SoftApp.Calcula.Api.csproj", "{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftApp.Domain.Test", "tests\SoftApp.Domain.Test\SoftApp.Domain.Test.csproj", "{C77FC4CB-94ED-4618-8425-864584D09768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77FC4CB-94ED-4618-8425-864584D09768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77FC4CB-94ED-4618-8425-864584D09768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77FC4CB-94ED-4618-8425-864584D09768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77FC4CB-94ED-4618-8425-864584D09768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{ED3F95E7-E3B0-4108-A2B4-C24BE89AE94C} = {BC827CFD-58A6-41A6-986F-6029347C2355}
 		{02A60681-612C-4298-84B0-5A49D3C815CD} = {FDF43981-8BB5-4E7B-940B-BBF424E1B6DD}
 		{F3436BCC-99B7-4D80-9B8A-AB9DEE88858B} = {FDF43981-8BB5-4E7B-940B-BBF424E1B6DD}
+		{C77FC4CB-94ED-4618-8425-864584D09768} = {BC827CFD-58A6-41A6-986F-6029347C2355}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {117A112E-E2E6-4132-9EC7-1DD28107DED2}

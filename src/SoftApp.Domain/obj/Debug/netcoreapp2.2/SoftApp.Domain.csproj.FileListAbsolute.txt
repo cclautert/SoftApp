@@ -16,5 +16,4 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2.2\SoftApp.Domain.pdb
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
-C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2.2\SoftApp.Domain.csprojAssemblyReference.cache
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2.2\SoftApp.Domain.csproj.CopyComplete

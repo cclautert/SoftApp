@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Aggregates;
 using Microsoft.AspNetCore.Mvc;
 using SoftApp.Domain.Interfaces;
@@ -17,11 +18,11 @@ namespace SoftApp.Taxa.Api.Controllers
         }
 
         [HttpGet("taxaJuros")]
-        public IActionResult TaxaJuros()
+        public async Task<IActionResult> TaxaJuros()
         {
             try
             {
-                var result = _jurosService.ObterTaxaJuro().Result;
+                var result = await _jurosService.ObterTaxaJuro();
                 return Ok(new
                 {
                     resultado = result
@@ -29,11 +30,11 @@ namespace SoftApp.Taxa.Api.Controllers
             }
             catch (BusinessException be)
             {
-                return BadRequest(new { TaxaErro = be.Message });
+                return BadRequest(new { ErroObterTaxa = be.Message });
             }
             catch (Exception e)
             {
-                return BadRequest(new { TaxaErro = e.Message });
+                return BadRequest(new { ErroObterTaxa = e.Message });
             }
         }
     }

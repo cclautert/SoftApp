@@ -454,6 +454,7 @@
       },
       "SoftApp.Domain/1.0.0": {
         "dependencies": {
+          "Aggregates.NET": "0.15.19.875",
           "Microsoft.Build.Tasks.Core": "16.0.461"
         },
         "runtime": {

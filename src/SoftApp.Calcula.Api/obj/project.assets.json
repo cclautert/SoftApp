@@ -4842,6 +4842,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Aggregates.NET": "0.15.19.875",
           "Microsoft.Build.Tasks.Core": "16.0.461"
         },
         "compile": {
