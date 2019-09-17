@@ -9,7 +9,7 @@ using SoftApp.Domain.Services;
 namespace SoftApp.Calcula.Api.Controllers
 {
     [Route("showmethecode")]
-    [ApiController]
+    //[ApiController]
     public class GitHubController : ControllerBase
     {
         private readonly ConfigApp _configApp;

@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+  softappcalculo:
+    container_name: softappcalculo
+    build:
+      context: ./SoftApp.Calcula.Api
+      dockerfile: Dockerfile
+    ports:
+      - '8082:80'
+    networks: 
+      - soft-network
+    depends_on:
+      - "softapptaxa"
+      
+  softapptaxa:
+    container_name: softapptaxa
+    build:
+      context: ./SoftApp.Taxa.Api
+      dockerfile: Dockerfile
+    ports:
+      - '8081:80'
+    networks:
+      - soft-network
+      
+networks: 
+  soft-network:
+      driver: bridge

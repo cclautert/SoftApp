@@ -22,11 +22,12 @@ namespace SoftApp.Calcula.Api.Controllers
         [HttpGet("calculajuros/valorinicial/{valorinicial}/meses/{meses}")]
         public async Task<IActionResult> Calculajuros(decimal valorinicial, int meses)
         {
+            string TaxaJuros = "";
             try
             {
                 var ValorCalculado = await _jurosService.CalculaJuros(valorinicial, meses);
 
-                var result = string.Format("{0:0.00}", ValorCalculado);
+                var result = string.Format("{0:0.00}", ValorCalculado);                
 
                 return Ok(new
                 {

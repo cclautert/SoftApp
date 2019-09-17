@@ -1,13 +1,8 @@
-﻿using Aggregates;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using SoftApp.Domain.Interfaces;
 using SoftApp.Domain.Services;
 using System;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SoftApp.Domain.Entities
@@ -58,7 +53,7 @@ namespace SoftApp.Domain.Entities
 
         public async Task<decimal> RecuperarTaxaJuros()
         {
-            HttpResponseMessage response = await _ClientHttp.GetAsync(_configApp.UrlTaxaApi);
+            HttpResponseMessage response = await _ClientHttp.GetAsync(_configApp.UrlTaxaApi);            
             if (response.IsSuccessStatusCode)
             {
                 var taxaJsonString = await response.Content.ReadAsStringAsync();
@@ -67,7 +62,7 @@ namespace SoftApp.Domain.Entities
             }
 
             return 0m;            
-        }
+        }        
 
         public Task<decimal> Truncate(decimal pValor, int pCasas)
         {
