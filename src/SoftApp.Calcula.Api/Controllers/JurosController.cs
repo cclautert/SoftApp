@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Aggregates;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +6,9 @@ using SoftApp.Domain.Interfaces;
 
 namespace SoftApp.Calcula.Api.Controllers
 {
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
+    [Route("v{version:apiVersion}/[controller]")]
     [ApiController]
     public class JurosController : ControllerBase
     {
@@ -18,11 +18,11 @@ namespace SoftApp.Calcula.Api.Controllers
         {
             _jurosService = pJurosService;
         }
-
+        
+        [MapToApiVersion("1.0")]
         [HttpGet("calculajuros/valorinicial/{valorinicial}/meses/{meses}")]
         public async Task<IActionResult> Calculajuros(decimal valorinicial, int meses)
         {
-            string TaxaJuros = "";
             try
             {
                 var ValorCalculado = await _jurosService.CalculaJuros(valorinicial, meses);
@@ -43,5 +43,30 @@ namespace SoftApp.Calcula.Api.Controllers
                 return BadRequest(new { ErroCalcularJuros = e.Message });
             }
         }
+
+        [MapToApiVersion("2.0")]
+        [HttpGet("calculajuros")]        
+        public async Task<IActionResult> Calculajuros_v2(decimal valorinicial, int meses)
+        {
+            try
+            {
+                var ValorCalculado = await _jurosService.CalculaJuros(valorinicial, meses);
+
+                var result = string.Format("{0:0.00}", ValorCalculado);
+
+                return Ok(new
+                {
+                    resultado = result
+                });
+            }
+            catch (BusinessException be)
+            {
+                return BadRequest(new { ErroCalcularJuros = be.Message });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { ErroCalcularJuros = e.Message });
+            }
+        }        
     }
 }

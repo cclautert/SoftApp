@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -36,13 +37,32 @@ namespace SoftApp.Taxa.Api
             Configuration.Bind("ConfigApp", configApp);
             services.AddSingleton(configApp);
 
+            services.AddApiVersioning(v =>
+            {
+                v.ReportApiVersions = true;
+                v.AssumeDefaultVersionWhenUnspecified = true;
+                v.DefaultApiVersion = new ApiVersion(1 , 0);
+            });
+
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("SoftApp", new Info
+                s.SwaggerDoc("v1.0", new Info
                 {
                     Title = "Obtem Taxa",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v1",
+                    Version = "v1.0",
+                    Contact = new Contact
+                    {
+                        Name = "Cristiano Claudson Lautert",
+                        Email = "cristiano.c.lautert@gmail.com",
+                        Url = "https://github.com/cclautert"
+                    }
+                });
+                s.SwaggerDoc("v2.0", new Info
+                {
+                    Title = "Obtem Taxa",
+                    Description = "Seleção de pessoa Desenvolvedora .Net Core",
+                    Version = "v2.0",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -69,7 +89,8 @@ namespace SoftApp.Taxa.Api
             app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
             app.UseSwaggerUI(su =>
             {
-                su.SwaggerEndpoint("/doc/SoftApp/doc.json", "SoftApp V1");
+                su.SwaggerEndpoint("/doc/v1.0/doc.json", "SoftApp V1.0");
+                su.SwaggerEndpoint("/doc/v2.0/doc.json", "SoftApp V2.0");
                 su.RoutePrefix = "doc";
             });
 

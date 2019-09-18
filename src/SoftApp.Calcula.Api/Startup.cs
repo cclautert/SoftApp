@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using SoftApp.Domain.Entities;
 using SoftApp.Domain.Interfaces;
 using SoftApp.Domain.Services;
@@ -35,14 +29,33 @@ namespace SoftApp.Calcula.Api
             var configApp = new ConfigApp();
             Configuration.Bind("ConfigApp", configApp);
             services.AddSingleton(configApp);
+            
+            services.AddApiVersioning(v =>
+            {
+                v.ReportApiVersions = true;
+                v.AssumeDefaultVersionWhenUnspecified = true;
+                v.DefaultApiVersion = new ApiVersion(1, 0);
+            });
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("SoftApp", new Info
+                s.SwaggerDoc("v1.0", new Info
                 {
                     Title = "Calcula Juros",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v1",
+                    Version = "v1.0",
+                    Contact = new Contact
+                    {
+                        Name = "Cristiano Claudson Lautert",
+                        Email = "cristiano.c.lautert@gmail.com",
+                        Url = "https://github.com/cclautert"
+                    }
+                });
+                s.SwaggerDoc("v2.0", new Info
+                {
+                    Title = "Obtem Taxa",
+                    Description = "Seleção de pessoa Desenvolvedora .Net Core",
+                    Version = "v2.0",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -69,7 +82,8 @@ namespace SoftApp.Calcula.Api
             app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
             app.UseSwaggerUI(su =>
             {
-                su.SwaggerEndpoint("/doc/SoftApp/doc.json", "SoftApp V1");
+                su.SwaggerEndpoint("/doc/v1.0/doc.json", "SoftApp V1.0");
+                su.SwaggerEndpoint("/doc/v2.0/doc.json", "SoftApp V2.0");
                 su.RoutePrefix = "doc";
             });
 

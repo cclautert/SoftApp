@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SoftApp.Domain.Services;
 
 namespace SoftApp.Calcula.Api.Controllers
 {
+    [ApiVersion("1.0")]
     [Route("showmethecode")]
-    //[ApiController]
+    [ApiController]
     public class GitHubController : ControllerBase
     {
         private readonly ConfigApp _configApp;
@@ -19,6 +17,7 @@ namespace SoftApp.Calcula.Api.Controllers
             _configApp = configApp;
         }
 
+        [MapToApiVersion("1.0")]
         [HttpGet("")]
         public IActionResult Index()
         {
@@ -32,7 +31,7 @@ namespace SoftApp.Calcula.Api.Controllers
             catch (Exception e)
             {
                 return BadRequest(new { ShowmeTheCode = e.Message });
-            }            
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "53ebadcafd2672ef0f2ef71d0b54bcdee5acbca8"
+    "signature": "a76d46283381db53d4e0ed328ecd8cc7fe878046"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
         "dependencies": {
           "Aggregates.NET": "0.15.19.875",
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Versioning": "3.1.6",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.9.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
@@ -51,6 +52,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Aggregates.NET.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Versioning/3.1.6": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.7172.37315"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {}
         }
       },
       "Microsoft.Build.Framework/16.0.461": {
@@ -3735,6 +3750,13 @@
       "sha512": "sha512-gQolOfFwxfsrh1HtaCW1QvH+mBWQd7l/nsQ0lAwUT5HjR4TJCKFJNueVXDxGy6ysiQ+Bg867ulTHiGg6yV76DQ==",
       "path": "aggregates.net/0.15.19.875",
       "hashPath": "aggregates.net.0.15.19.875.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning/3.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tlM7c315iLDGr+2D7MK3GzEX8tGUj5joxc2p0j+fW6CkrJnXbnNj+yRUkm6SYDQ2pdshgvxySrB1g/bLBbtI3g==",
+      "path": "microsoft.aspnetcore.mvc.versioning/3.1.6",
+      "hashPath": "microsoft.aspnetcore.mvc.versioning.3.1.6.nupkg.sha512"
     },
     "Microsoft.Build.Framework/16.0.461": {
       "type": "package",

@@ -26,22 +26,10 @@
       },
       "applicationUrl": "http://localhost:5001"
     },
-    //"Docker": {
-    //  "commandName": "Docker",
-    //  "launchBrowser": true,
-    //  "launchUrl": "{Scheme}://localhost:{ServicePort}/doc"
-    //}
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/values",
-      "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443;http://+:80",
-        "ASPNETCORE_HTTPS_PORT": "44359"
-      },
-      "httpPort": 54002,
-      "useSSL": true,
-      "sslPort": 44359
+      "launchUrl": "{Scheme}://localhost:{ServicePort}/doc"
     }
   }
 }

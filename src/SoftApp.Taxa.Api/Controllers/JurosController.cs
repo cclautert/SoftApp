@@ -6,7 +6,8 @@ using SoftApp.Domain.Interfaces;
 
 namespace SoftApp.Taxa.Api.Controllers
 {
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [Route("v{version:apiVersion}/[controller]")]
     [ApiController]
     public class JurosController : ControllerBase
     {
@@ -17,6 +18,7 @@ namespace SoftApp.Taxa.Api.Controllers
             _jurosService = pJurosService;
         }
 
+        [MapToApiVersion("1.0")]
         [HttpGet("taxaJuros")]
         public async Task<IActionResult> TaxaJuros()
         {
