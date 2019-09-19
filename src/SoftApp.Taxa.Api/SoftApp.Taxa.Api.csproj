@@ -10,6 +10,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SoftApp.Taxa.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

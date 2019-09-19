@@ -22,3 +22,4 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.pdb
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Domain.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Domain.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Calcula.Api\bin\netcoreapp2.2\SoftApp.Calcula.Api.xml

@@ -58,6 +58,8 @@ namespace SoftApp.Taxa.Api
                         Url = "https://github.com/cclautert"
                     }
                 });
+
+                s.IncludeXmlComments("SoftApp.Taxa.Api.xml");
             });
         }
 

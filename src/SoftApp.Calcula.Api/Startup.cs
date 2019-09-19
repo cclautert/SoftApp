@@ -85,6 +85,8 @@ namespace SoftApp.Calcula.Api
                     });
 
                 s.AddSecurityRequirement(security);
+
+                s.IncludeXmlComments("SoftApp.Calcula.Api.xml");
             });
 
             services.AddCors(opt =>

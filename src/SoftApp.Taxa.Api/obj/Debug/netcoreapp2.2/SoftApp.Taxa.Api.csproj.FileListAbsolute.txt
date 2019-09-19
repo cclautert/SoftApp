@@ -22,3 +22,4 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\S
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.pdb
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Domain.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Domain.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Taxa.Api\bin\netcoreapp2.2\SoftApp.Taxa.Api.xml

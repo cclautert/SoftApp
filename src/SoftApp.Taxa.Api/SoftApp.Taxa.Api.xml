@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SoftApp.Taxa.Api</name>
+    </assembly>
+    <members>
+        <member name="M:SoftApp.Taxa.Api.Controllers.JurosController.TaxaJuros">
+            <summary>
+            Retorna o juros de 0,01 (fixo no código)
+            </summary>
+            <returns>Retorna 0,01</returns>
+        </member>
+    </members>
+</doc>

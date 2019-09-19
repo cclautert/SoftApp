@@ -18,6 +18,10 @@ namespace SoftApp.Taxa.Api.Controllers
             _jurosService = pJurosService;
         }
 
+        /// <summary>
+        /// Retorna o juros de 0,01 (fixo no código)
+        /// </summary>
+        /// <returns>Retorna 0,01</returns>
         [MapToApiVersion("1.0")]
         [HttpGet("taxaJuros")]
         public async Task<IActionResult> TaxaJuros()

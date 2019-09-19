@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SoftApp.Calcula.Api</name>
+    </assembly>
+    <members>
+        <member name="M:SoftApp.Calcula.Api.Controllers.GitHubController.Index">
+            <summary>
+            Retorna a url onde encontra-se o fonte no github
+            </summary>
+            <returns>Retorna uma string contendo a url com o fonte no github</returns>
+        </member>
+        <member name="M:SoftApp.Calcula.Api.Controllers.JurosController.Calculajuros(System.Decimal,System.Int32)">
+            <summary>
+            Ela faz um cálculo em memória, de juros compostos, onde: Valor Final = Valor Inicial * (1 + juros) ^ Tempo
+            </summary>
+            <param name="valorinicial">É um decimal que representa o valor inicial</param>
+            <param name="meses">É um inteiro que representa meses</param>
+            <returns>O resultado final é truncado (sem arredondamento) em duas casas decimais</returns>
+        </member>
+        <member name="M:SoftApp.Calcula.Api.Controllers.JurosController.Calculajuros_v2(System.Decimal,System.Int32)">
+            <summary>
+            Ela faz um cálculo em memória, de juros compostos, onde: Valor Final = Valor Inicial * (1 + juros) ^ Tempo
+            </summary>
+            <param name="valorinicial">É um decimal que representa o valor inicial</param>
+            <param name="meses">É um inteiro que representa meses</param>
+            <returns>O resultado final é truncado (sem arredondamento) em duas casas decimais</returns>
+        </member>
+    </members>
+</doc>
