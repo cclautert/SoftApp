@@ -16,6 +16,10 @@ namespace SoftApp.Calcula.Api.Controllers
             _configApp = configApp;
         }
 
+        /// <summary>
+        /// Retorna a url onde encontra-se o fonte no github
+        /// </summary>
+        /// <returns>Retorna uma string contendo a url com o fonte no github</returns>
         [MapToApiVersion("1.0")]
         [HttpGet("")]
         public IActionResult Index()

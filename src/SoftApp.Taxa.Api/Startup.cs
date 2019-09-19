@@ -46,11 +46,11 @@ namespace SoftApp.Taxa.Api
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1.0", new Info
+                s.SwaggerDoc("v1", new Info
                 {
                     Title = "Obtem Taxa",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v1.0",
+                    Version = "v1",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -77,7 +77,7 @@ namespace SoftApp.Taxa.Api
             app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
             app.UseSwaggerUI(su =>
             {
-                su.SwaggerEndpoint("/doc/v1.0/doc.json", "SoftApp V1.0");
+                su.SwaggerEndpoint("/doc/v1/doc.json", "SoftApp V1");
                 su.RoutePrefix = "";
             });
 

@@ -19,7 +19,14 @@ namespace SoftApp.Calcula.Api.Controllers
         {
             _jurosService = pJurosService;
         }
-        
+
+        /// <summary>
+        /// Ela faz um cálculo em memória, de juros compostos, onde: Valor Final = Valor Inicial * (1 + juros) ^ Tempo
+        /// </summary>
+        /// <param name="valorinicial">É um decimal que representa o valor inicial</param>
+        /// <param name="meses">É um inteiro que representa meses</param>
+        /// <returns>O resultado final é truncado (sem arredondamento) em duas casas decimais</returns>
+
         [MapToApiVersion("1.0")]
         [HttpGet("calculajuros/valorinicial/{valorinicial}/meses/{meses}")]
         public async Task<IActionResult> Calculajuros(decimal valorinicial, int meses)
@@ -45,6 +52,12 @@ namespace SoftApp.Calcula.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Ela faz um cálculo em memória, de juros compostos, onde: Valor Final = Valor Inicial * (1 + juros) ^ Tempo
+        /// </summary>
+        /// <param name="valorinicial">É um decimal que representa o valor inicial</param>
+        /// <param name="meses">É um inteiro que representa meses</param>
+        /// <returns>O resultado final é truncado (sem arredondamento) em duas casas decimais</returns>
         [MapToApiVersion("2.0")]
         [HttpGet("calculajuros"), Authorize]        
         public async Task<IActionResult> Calculajuros_v2(decimal valorinicial, int meses)
