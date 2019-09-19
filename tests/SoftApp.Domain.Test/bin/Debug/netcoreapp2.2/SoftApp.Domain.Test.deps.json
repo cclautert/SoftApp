@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "e293b6c1e6cebf5c6d74bda4651d9249a045ed35"
+    "signature": "77cc8f20dc746ffdbe3308041a75a1cb303a668b"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,6 +15,17 @@
         },
         "runtime": {
           "SoftApp.Domain.Test.dll": {}
+        }
+      },
+      "Aggregates.NET/0.15.19.875": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aggregates.NET.dll": {
+            "assemblyVersion": "0.15.1.0",
+            "fileVersion": "0.15.1.0"
+          }
         }
       },
       "Microsoft.Build.Framework/16.0.461": {
@@ -72,26 +83,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.0.1": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Dynamic.Runtime": "4.0.11",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.ObjectModel": "4.0.12",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.1.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Threading": "4.3.0"
-        }
-      },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
         "dependencies": {
           "System.AppContext": "4.1.0",
@@ -418,7 +410,7 @@
       },
       "Newtonsoft.Json/9.0.1": {
         "dependencies": {
-          "Microsoft.CSharp": "4.0.1",
+          "Microsoft.CSharp": "4.5.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Dynamic.Runtime": "4.0.11",
@@ -1508,6 +1500,7 @@
       },
       "SoftApp.Domain/1.0.0": {
         "dependencies": {
+          "Aggregates.NET": "0.15.19.875",
           "Microsoft.Build.Tasks.Core": "16.0.461"
         },
         "runtime": {
@@ -1521,6 +1514,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Aggregates.NET/0.15.19.875": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gQolOfFwxfsrh1HtaCW1QvH+mBWQd7l/nsQ0lAwUT5HjR4TJCKFJNueVXDxGy6ysiQ+Bg867ulTHiGg6yV76DQ==",
+      "path": "aggregates.net/0.15.19.875",
+      "hashPath": "aggregates.net.0.15.19.875.nupkg.sha512"
     },
     "Microsoft.Build.Framework/16.0.461": {
       "type": "package",
@@ -1550,12 +1550,12 @@
       "path": "microsoft.codecoverage/16.0.1",
       "hashPath": "microsoft.codecoverage.16.0.1.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.0.1": {
+    "Microsoft.CSharp/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
-      "path": "microsoft.csharp/4.0.1",
-      "hashPath": "microsoft.csharp.4.0.1.nupkg.sha512"
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
       "type": "package",

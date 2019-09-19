@@ -12,7 +12,7 @@ namespace SoftApp.Domain.Test
 
         public CalcularJurosTest()
         {
-            ConfigApp configApp = new ConfigApp();
+            ConfigAppService configApp = new ConfigAppService();
             configApp.IsRunningTest = true;            
             _jurosService = new JurosService(configApp);
         }

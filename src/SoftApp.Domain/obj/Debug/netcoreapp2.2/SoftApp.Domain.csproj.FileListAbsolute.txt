@@ -17,4 +17,10 @@ C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2.2\SoftApp.Domain.csproj.CopyComplete
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\Cristiano\source\repos\SoftApp\src\SoftApp.Domain\obj\Debug\netcoreapp2.2\SoftApp.Domain.csprojAssemblyReference.cache

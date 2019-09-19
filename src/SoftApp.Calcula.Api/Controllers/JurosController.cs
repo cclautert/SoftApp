@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Aggregates;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SoftApp.Domain.Interfaces;
 
@@ -45,7 +46,7 @@ namespace SoftApp.Calcula.Api.Controllers
         }
 
         [MapToApiVersion("2.0")]
-        [HttpGet("calculajuros")]        
+        [HttpGet("calculajuros"), Authorize]        
         public async Task<IActionResult> Calculajuros_v2(decimal valorinicial, int meses)
         {
             try

@@ -33,7 +33,7 @@ namespace SoftApp.Taxa.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddTransient<IJurosService, JurosService>();
 
-            var configApp = new ConfigApp();
+            var configApp = new ConfigAppService();
             Configuration.Bind("ConfigApp", configApp);
             services.AddSingleton(configApp);
 
@@ -51,18 +51,6 @@ namespace SoftApp.Taxa.Api
                     Title = "Obtem Taxa",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
                     Version = "v1.0",
-                    Contact = new Contact
-                    {
-                        Name = "Cristiano Claudson Lautert",
-                        Email = "cristiano.c.lautert@gmail.com",
-                        Url = "https://github.com/cclautert"
-                    }
-                });
-                s.SwaggerDoc("v2.0", new Info
-                {
-                    Title = "Obtem Taxa",
-                    Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v2.0",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -90,8 +78,7 @@ namespace SoftApp.Taxa.Api
             app.UseSwaggerUI(su =>
             {
                 su.SwaggerEndpoint("/doc/v1.0/doc.json", "SoftApp V1.0");
-                su.SwaggerEndpoint("/doc/v2.0/doc.json", "SoftApp V2.0");
-                su.RoutePrefix = "doc";
+                su.RoutePrefix = "";
             });
 
             app.UseCors(builder =>

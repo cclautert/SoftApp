@@ -10,9 +10,9 @@ namespace SoftApp.Domain.Entities
     public class JurosService : IJurosService
     {
         private readonly HttpClient _ClientHttp;
-        private readonly ConfigApp _configApp;
+        private readonly ConfigAppService _configApp;
 
-        public JurosService(ConfigApp pConfigApp)
+        public JurosService(ConfigAppService pConfigApp)
         {
             _ClientHttp = new HttpClient();
             _configApp = pConfigApp;
@@ -58,7 +58,7 @@ namespace SoftApp.Domain.Entities
             {
                 var taxaJsonString = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<JsonResponse>(taxaJsonString).resultado;
+                return JsonConvert.DeserializeObject<JsonResponseService>(taxaJsonString).resultado;
             }
 
             return 0m;            

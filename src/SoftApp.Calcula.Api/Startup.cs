@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using SoftApp.Domain.Entities;
 using SoftApp.Domain.Interfaces;
 using SoftApp.Domain.Services;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Collections.Generic;
+using System.Text;
 
 namespace SoftApp.Calcula.Api
 {
@@ -24,9 +28,10 @@ namespace SoftApp.Calcula.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddTransient<IJurosService, JurosService>();            
+            services.AddTransient<IJurosService, JurosService>();
+            services.AddTransient<ITokenService, TokenService>();
 
-            var configApp = new ConfigApp();
+            var configApp = new ConfigAppService();
             Configuration.Bind("ConfigApp", configApp);
             services.AddSingleton(configApp);
             
@@ -39,11 +44,11 @@ namespace SoftApp.Calcula.Api
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1.0", new Info
+                s.SwaggerDoc("v1", new Info
                 {
                     Title = "Calcula Juros",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v1.0",
+                    Version = "v1",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -51,11 +56,11 @@ namespace SoftApp.Calcula.Api
                         Url = "https://github.com/cclautert"
                     }
                 });
-                s.SwaggerDoc("v2.0", new Info
+                s.SwaggerDoc("v2", new Info
                 {
                     Title = "Obtem Taxa",
                     Description = "Seleção de pessoa Desenvolvedora .Net Core",
-                    Version = "v2.0",
+                    Version = "v2",
                     Contact = new Contact
                     {
                         Name = "Cristiano Claudson Lautert",
@@ -63,6 +68,49 @@ namespace SoftApp.Calcula.Api
                         Url = "https://github.com/cclautert"
                     }
                 });
+
+                var security = new Dictionary<string, IEnumerable<string>>
+                {
+                    {"Bearer", new string[] { }},
+                };
+
+                s.AddSecurityDefinition(
+                    "Bearer",
+                    new ApiKeyScheme
+                    {
+                        In = "header",
+                        Description = "Copie 'Bearer ' + token'",
+                        Name = "Authorization",
+                        Type = "apiKey"
+                    });
+
+                s.AddSecurityRequirement(security);
+            });
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy",
+                    b => b.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    .Build());
+            });
+
+            // Jwt setup
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(opt =>
+            {
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["ConfigApp:TokenIssuer"],
+                    ValidAudience = Configuration["ConfigApp:TokenIssuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["ConfigApp:TokenKey"]))
+                };
             });
         }
 
@@ -82,9 +130,9 @@ namespace SoftApp.Calcula.Api
             app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
             app.UseSwaggerUI(su =>
             {
-                su.SwaggerEndpoint("/doc/v1.0/doc.json", "SoftApp V1.0");
-                su.SwaggerEndpoint("/doc/v2.0/doc.json", "SoftApp V2.0");
-                su.RoutePrefix = "doc";
+                su.SwaggerEndpoint("/doc/v1/doc.json", "SoftApp V1");
+                su.SwaggerEndpoint("/doc/v2/doc.json", "SoftApp V2");
+                su.RoutePrefix = "";
             });
 
             app.UseCors(builder =>
@@ -93,6 +141,8 @@ namespace SoftApp.Calcula.Api
                 .AllowAnyOrigin()
                 .AllowCredentials());
 
+            app.UseAuthentication();
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

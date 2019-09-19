@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SoftApp.Domain.Services;
 
@@ -10,9 +9,9 @@ namespace SoftApp.Calcula.Api.Controllers
     [ApiController]
     public class GitHubController : ControllerBase
     {
-        private readonly ConfigApp _configApp;
+        private readonly ConfigAppService _configApp;
 
-        public GitHubController(ConfigApp configApp)
+        public GitHubController(ConfigAppService configApp)
         {
             _configApp = configApp;
         }

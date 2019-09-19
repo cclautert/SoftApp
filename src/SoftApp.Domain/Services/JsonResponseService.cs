@@ -1,6 +1,8 @@
-﻿namespace SoftApp.Domain.Services
+﻿using SoftApp.Domain.Interfaces;
+
+namespace SoftApp.Domain.Services
 {
-    public class JsonResponse
+    public class JsonResponseService: IJsonResponseService
     {
         private decimal _resultado;
         public decimal resultado
